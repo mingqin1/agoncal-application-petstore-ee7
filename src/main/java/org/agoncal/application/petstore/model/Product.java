@@ -28,7 +28,14 @@ public class Product implements Serializable
    // ======================================
 
    @Id
-   @GeneratedValue(strategy = GenerationType.AUTO)
+   @GeneratedValue(
+           generator = "petStore_sequence", 
+           strategy = GenerationType.SEQUENCE )
+   @SequenceGenerator(
+        name = "petStore_sequence", 
+        sequenceName="petstoresequence",
+        allocationSize = 10
+    )
    @Column(name = "id", updatable = false, nullable = false)
    private Long id;
    @Version

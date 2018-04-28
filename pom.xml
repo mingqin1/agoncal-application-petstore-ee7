@@ -23,6 +23,8 @@
     <version.derby>10.10.1.1</version.derby>
     <version.junit>4.12</version.junit>
     <version.equalsverifier>1.7.8</version.equalsverifier>
+        <version.mariadb.java.client>2.2.1</version.mariadb.java.client>
+        <version.mysql.connector.java>5.1.45</version.mysql.connector.java>
     <!-- App servers -->
     <version.wildfly>11.0.0.Final</version.wildfly>
     <!-- UI (WebJar, Bootstrap, JQuery...) -->
@@ -164,6 +166,16 @@
       <artifactId>arquillian-junit</artifactId>
       <scope>test</scope>
       <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>org.mariadb.jdbc</groupId>
+            <artifactId>mariadb-java-client</artifactId>
+            <version>${version.mariadb.java.client}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${version.mysql.connector.java}</version>
     </dependency>
     <dependency>
       <groupId>org.jboss.shrinkwrap</groupId>
