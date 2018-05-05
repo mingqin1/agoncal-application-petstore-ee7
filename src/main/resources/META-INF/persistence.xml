@@ -11,6 +11,7 @@
             <!--property name="hibernate.id.new_generator_mappings" value="true" /-->
             <property name="hibernate.show_sql" value="false"/>
             <property name="hibernate.format_sql" value="false"/>
+            <property name="hibernate.generate_statistics" value="true"/>
         </properties>
     </persistence-unit>
 </persistence>
