@@ -29,10 +29,6 @@ import javax.inject.Inject;
  * GET to /pets/{petId}
  */
 
-
-@Stateless
-@LocalBean
-
 public class GetPetDemoAction extends AbstractDemoAction {
     
    
