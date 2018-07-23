@@ -5,11 +5,9 @@
  */
 package com.amazonaws.apigatewaydemo.logic;
 
-import com.amazonaws.apigatewaydemo.model.pet.Pet;
 import com.amazonaws.apigatewaydemo.model.user.User;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
-import javax.inject.Inject;
 
 /**
  *
@@ -17,16 +15,13 @@ import javax.inject.Inject;
  */
 @Stateless
 @LocalBean
-public class PetService implements Service {
-    
-    @Inject UserService userService;
+public class UserService implements Service {
    
-    public Pet getPetById( String petId){
+    public User getUserByFirstName( String firstName){
         
-         User aUser = userService.getUserByFirstName("John");
-         Pet pet = new Pet();
-         pet.setPetId( petId);
-         return pet;
+         User user = new User();
+         user.setFirstName( firstName);
+         return user;
     }
     
     
