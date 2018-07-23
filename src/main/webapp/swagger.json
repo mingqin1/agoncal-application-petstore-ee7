@@ -21,6 +21,8 @@
   }, {
     "name" : "Item"
   }, {
+    "name" : "Pet"
+  }, {
     "name" : "Product"
   } ],
   "schemes" : [ "http", "https" ],
@@ -413,6 +415,22 @@
         "responses" : {
           "default" : {
             "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/pets" : {
+      "post" : {
+        "tags" : [ "Pet" ],
+        "operationId" : "lambdaHandler",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "string"
+            }
           }
         }
       }
